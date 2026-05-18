@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern TO-DO App</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background-animation"></div>
+
+<div class="container">
+  <div class="header">
+    <h1>My Tasks</h1>
+    <p class="subtitle">Stay organized, stay creative.</p>
+  </div>
+
+  <div class="task-input-wrapper">
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="What needs to be done?">
+      <button onclick="addTask()" class="add-btn" title="Add Task">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="task-list-container">
+    <ul id="taskList"></ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
