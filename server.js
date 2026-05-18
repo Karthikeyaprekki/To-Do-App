@@ -11,11 +11,12 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // Database
-const db = new sqlite3.Database("./tasks.db", (err) => {
+const DB_PATH = process.env.DB_PATH || "./tasks.db";
+const db = new sqlite3.Database(DB_PATH, (err) => {
   if (err) {
     console.log(err.message);
   } else {
-    console.log("Connected to SQLite database.");
+    console.log(`Connected to SQLite database at ${DB_PATH}`);
   }
 });
 
